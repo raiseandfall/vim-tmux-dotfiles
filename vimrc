@@ -72,7 +72,9 @@ filetype indent on
 set list listchars=tab:\ \ ,trail:·
 
 set nowrap       "Don't wrap lines
+" set wrap linebreak nolist " get word wrapping that doesn't cut a word in half
 set linebreak    "Wrap lines at convenient points
+set breakindent
 
 " ================ Folds ============================
 
