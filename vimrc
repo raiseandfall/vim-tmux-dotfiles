@@ -19,6 +19,18 @@ set gcr=a:blinkon0              "Disable cursor blink
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
 
+set ruler                       "Show current line and column position in file
+set modeline
+
+" Show file title in terminal tab
+set title
+
+" Highlight current line
+set cursorline
+
+" Don't keep results hightlighted after searching
+set nohlsearch
+
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
 " http://items.sjbach.com/319/configuring-vim-right
@@ -75,6 +87,8 @@ set nowrap       "Don't wrap lines
 " set wrap linebreak nolist " get word wrapping that doesn't cut a word in half
 set linebreak    "Wrap lines at convenient points
 set breakindent
+
+set gdefault
 
 " ================ Folds ============================
 
