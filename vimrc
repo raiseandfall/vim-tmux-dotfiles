@@ -19,8 +19,12 @@ set gcr=a:blinkon0              "Disable cursor blink
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
 
+set fileformats+=dos
+
 set ruler                       "Show current line and column position in file
 set modeline
+
+set clipboard=unnamed
 
 " Show file title in terminal tab
 set title
