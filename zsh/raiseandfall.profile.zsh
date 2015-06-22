@@ -4,4 +4,4 @@ export PYENV_ROOT=/usr/local/var/pyenv
 export GOPATH=$HOME/go
 
 # Karn overrides git ( for multiple identities )
-if which karn > /dev/null; then eval "$(karn init)"; fi
+#if which karn > /dev/null; then eval "$(karn init)"; fi

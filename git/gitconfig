@@ -128,3 +128,5 @@
 [user]
 	name = raiseandfall
 	email = druidev+github@gmail.com
+[help]
+	autocorrect = 10
