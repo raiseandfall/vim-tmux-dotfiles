@@ -35,6 +35,13 @@ set cursorline
 " Don't keep results hightlighted after searching
 set nohlsearch
 
+" Show hidden files in NerdTree
+let NERDTreeShowHidden=1
+let g:NERDTreeWinSize=40
+
+" CtrlP
+"let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
+
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
 " http://items.sjbach.com/319/configuring-vim-right
@@ -48,6 +55,9 @@ syntax on
 " The mapleader has to be set before vundle starts loading all 
 " the plugins.
 let mapleader=","
+
+" Unite
+nnoremap <Leader>f :Unite -start-index file<CR>
 
 " =============== Vundle Initialization ===============
 " This loads all the plugins specified in ~/.vim/vundles.vim
