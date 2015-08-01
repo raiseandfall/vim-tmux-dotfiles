@@ -26,6 +26,10 @@ set modeline
 
 set clipboard=unnamed
 
+" Natural split opening
+set splitbelow
+set splitright
+
 " Show file title in terminal tab
 set title
 
@@ -36,11 +40,12 @@ set cursorline
 set nohlsearch
 
 " Show hidden files in NerdTree
-let NERDTreeShowHidden=1
+let g:NERDTreeShowHidden=1
 let g:NERDTreeWinSize=40
 
 " CtrlP
 "let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
+let g:ctrlp_show_hidden = 1
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
@@ -58,6 +63,9 @@ let mapleader=","
 
 " Unite
 nnoremap <Leader>f :Unite -start-index file<CR>
+
+" Change inside surrounding
+nmap <Leader>cis :ChangeInsideSurrounding<CR>
 
 " =============== Vundle Initialization ===============
 " This loads all the plugins specified in ~/.vim/vundles.vim
