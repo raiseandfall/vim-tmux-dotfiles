@@ -67,6 +67,9 @@ nnoremap <Leader>f :Unite -start-index file<CR>
 " Change inside surrounding
 nmap <Leader>cis :ChangeInsideSurrounding<CR>
 
+" ===================== Syntastic ====================
+"let g:syntastic_javascript_jshint_conf = $HOME . '/.jshintrc'
+
 " =============== Vundle Initialization ===============
 " This loads all the plugins specified in ~/.vim/vundles.vim
 " Use Vundle plugin to manage all other plugins
@@ -146,6 +149,10 @@ set incsearch       " Find the next match as we type the search
 set hlsearch        " Highlight searches by default
 set ignorecase      " Ignore case when searching...
 set smartcase       " ...unless we type a capital
+
+" ================ Sizes ===================
+set winheight=30
+set winminheight=5
 
 " ================ Custom Settings ========================
 so ~/.yadr/vim/settings.vim
