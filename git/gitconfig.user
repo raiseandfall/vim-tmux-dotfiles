@@ -1,0 +1,112 @@
+[color "status"]
+
+  added = yellow
+  changed = green
+  untracked = cyan
+
+[alias]
+
+  # Longer log
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+
+  s = status -s
+
+  # Show the diff between the latest commit and the current status
+  d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+
+  # `git di $number` shows the diff between the state `$number` revisions ago and the current state
+  di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
+
+  # Pull origin master
+  plom = pull origin master
+
+  # Pull origin develop
+  plod = pull origin develop
+
+  # Pull origin 
+  plo = pull origin 
+
+  # Push origin develop
+  phod = push origin develop
+
+  # Push origin master
+  phom = push origin master
+
+  # Commit
+  cm = commit -m
+
+  # Tags, branches, remotes
+  tags = tag -l
+  branches = branch -a
+  remotes = remote -v
+
+  # Credit an author on the latest commit
+  credit = "!f() { git commit --amend --author \"$1 <$2>\" -C HEAD; }; f"
+
+  # Interactive rebase with the given number of latest commits
+  reb = "!r() { git rebase -i HEAD~$1; }; r"
+
+  # Remove the old tag with this name and tag the latest commit with it.
+  retag = "!r() { git tag -d $1 && git push origin :refs/tags/$1 && git tag $1; }; r"
+
+  # Find branches containing commit
+  fb = "!f() { git branch -a --contains $1; }; f"
+
+  # Find tags containing commit
+  ft = "!f() { git describe --always --contains $1; }; f"
+
+  # Find commits by source code
+  fc = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short -S$1; }; f"
+
+  # Find commits by commit message
+  fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1; }; f"
+
+  # List contributors with number of commits
+  contributors = shortlog --summary --numbered
+
+[core]
+
+  # Use custom .gitignore and .gitattributes
+  excludesfile = ~/.gitignore
+  attributesfile = ~/.gitattributes
+
+[diff]
+
+  # Detect copies as well as renames
+  renames = copies
+
+[help]
+
+  # Automatically correct and execute mistyped commands
+  autocorrect = 1
+
+[merge]
+
+  # Include summaries of merged commits in newly created merge commit messages
+  log = true
+
+[push]
+
+  default = matching
+
+# URL shorthands
+
+[url "git@github.com:"]
+
+  insteadOf = "gh:"
+  pushInsteadOf = "github:"
+  pushInsteadOf = "git://github.com/"
+
+[url "git://github.com/"]
+
+  insteadOf = "github:"
+
+[url "git@gist.github.com:"]
+
+  insteadOf = "gst:"
+  pushInsteadOf = "gist:"
+  pushInsteadOf = "git://gist.github.com/"
+
+[url "git://gist.github.com/"]
+
+  insteadOf = "gist:"
