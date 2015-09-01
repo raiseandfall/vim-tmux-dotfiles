@@ -46,6 +46,7 @@ let g:NERDTreeWinSize=40
 " CtrlP
 "let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
 let g:ctrlp_show_hidden = 1
+"let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
