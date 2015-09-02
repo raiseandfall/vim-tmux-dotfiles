@@ -1,0 +1,40 @@
+#
+# A ZSH theme
+#  * Time shown on the right
+#  * Git branch info on the left
+#  * Single line prompt
+#
+# Authors:
+#   Matthieu Collé <raiseandfall@gmail.com>
+
+source ~/Projects/system/zsh-git-prompt/zshrc.sh
+
+function prompt_raiseandfall_setup {
+  setopt LOCAL_OPTIONS
+  unsetopt XTRACE KSH_ARRAYS
+  prompt_opts=(cr percent subst)
+
+  # Use extended color pallete if available.
+  if [[ $TERM = *256color* || $TERM = *rxvt* ]]; then
+    __PROMPT_RAISEANDFALL_COLORS=(
+      "%F{81}"  # turquoise
+      "%F{166}" # orange
+      "%F{135}" # purple
+      "%F{161}" # hotpink
+      "%F{118}" # limegreen
+    )
+  else
+    __PROMPT_RAISEANDFALL_COLORS=(
+      "%F{cyan}"
+      "%F{yellow}"
+      "%F{magenta}"
+      "%F{red}"
+      "%F{green}"
+    )
+  fi
+
+  PROMPT="${__PROMPT_RAISEANDFALL_COLORS[3]}%n%f@${__PROMPT_RAISEANDFALL_COLORS[2]}%m%f ${__PROMPT_RAISEANDFALL_COLORS[5]}%~%f "'$(git_super_status)'" $ "
+  RPROMPT='[%*]'
+}
+
+prompt_raiseandfall_setup "$@"
