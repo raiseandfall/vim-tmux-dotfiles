@@ -1,0 +1,137 @@
+u - undo
+Ctrl+R - redo
+gg - Go top of the file
+G - Go bottom of the file
+gg=G - Go to top of file & indent all file
+ggdG - Delete the entire contents of a file
+gg>10G - Indent 10 first lines of document
+10G>G - Indent from line 10 to end of document
+dG - Delete and go to the bottom of the file
+Shift+{ and Shift+} - jump up/down braces
+* - on a word, automatically search for this word ( press n for next )
+y - Copy content (visual mode)
+yat - Copies the contents of the tag you're in
+p - Pastes
+dat - Delete a tag
+dit - Delete in tag: deletes everything inside the tag
+A - Insert mode at the end of line
+a - Insert mode after the cursor
+} or { - Jumps to the next or previous empty line
+o - Puts a blank line below the current line and places in insert mode
+O - Puts a blank line above the current line and places in insert mode
+w - jump by start of words (punctuation considered words)
+W - jump by words (spaces separate words)
+e - jump to end of words (punctuation considered words)
+E - jump to end of words (no punctuation)
+b - jump backward by words (punctuation considered words)
+B - jump backward by words (no punctuation)
+0 - (zero) start of line
+^ - first non-blank character of line
+G - Go To command (prefix with number - 5G goes to line 5)
+f - jump to any character in a line
+c - Empty current line & enter insert mode
+s - Substitute
+f> - Go forward to a closing chevron
+vi" - Visualise inside double quotes
+vat - Visual select the current tag
+vip - Select a paragraph
+va( - Visualise around parentheses
+diw - Delete in word
+ciw - Change in word: delete word & enter insert mode
+cit - Change in tag
+gUe - Go Uppercase until end of word
+bw - Wipes out the current buffer
+>> or << - Indents in control mode
+dis - delete inside a sentence
+V10jd (=10dd) - Visualise 10 lines down & delete
+H - move cursor to highest visible line
+M - move cursor to middle visible line
+L - move cursor to lowest visible line
+dH - move cursor to highest visible line & delete stuff on the way there
+:%s/{search}/{replace} - Search and replace first reference
+:%s/{search}/{replace}/g - Search and replace all references
+:/s/{search}/{replace}/g - Search and replace in visual mode
+vi{ -
+ci{ -
+yi{ -
+gUi{ -
+da{ -
+3cit - 
+
+h   move one character left
+j   move one row down
+k   move one row up
+l   move one character right
+w   move to beginning of next word
+b   move to beginning of previous word
+e   move to end of word
+W   move to beginning of next word after a whitespace
+B   move to beginning of previous word before a whitespace
+E   move to end of word before a whitespace
+
+0   move to beginning of line
+$   move to end of line
+^   move to first non-blank char of the line
+_   same as above, but can take a count to go to a different line
+g_  move to last non-blank char of the line (can also take a count as above)
+
+gg  move to first line
+G   move to last line
+nG  move to n'th line of file (where n is a number)
+
+H   move to top of screen
+M   move to middle of screen
+L   move to bottom of screen
+
+z.  put the line with the cursor at the center
+zt  put the line with the cursor at the top
+zb  put the line with the cursor at the bottom of the screen
+
+Ctrl-D  move half-page down
+Ctrl-U  move half-page up
+Ctrl-B  page up
+Ctrl-F  page down
+Ctrl-o  jump to last cursor position
+Ctrl-i  jump to next cursor position
+
+n   next matching search pattern
+N   previous matching search pattern
+*   next word under cursor
+#   previous word under cursor
+g*  next matching search pattern under cursor
+g#  previous matching search pattern under cursor
+
+%   jump to matching bracket { } [ ] ( )
+
+:vsp [file]   Opens a file in a vertical split
+:sp  [file]   Opens a file in a horizontal split
+:10vsp  [file]  Opens a file in a vertical split, 10units for width
+
+
+#####################################
+# TMUX + VIM Seamless navigation
+#####################################
+Ctrl+H      Seamless go to left pane
+Ctrl+J      Seamless go to top pane
+Ctrl+K      Seamless go to bottom pane
+Ctrl+L      Seamless go to right pane
+
+(Ctrl+W) _    Max out the height of the current split
+(Ctrl+W) |    Max out the width of the current split
+(Ctrl+W) =    Normalize all split sizes, which is very handy when resizing terminal
+(Ctrl+W) R    Swap top/bottom or left/right split
+(Ctrl+W) T    Break out current window into a new window
+(Ctrl+W) o    Close every window in the current tabview but the current one
+
+
+gf      Opens the file that is under the cursor
+
+ctrl+y +      Emmet
+
+0D            Empty current line
+
+####### MULTIPLE-CURSORS #######
+,mc           Switch to multiple cursor mode
+C-n           Next instance
+C-p           Previous instance
+C-x           ...
