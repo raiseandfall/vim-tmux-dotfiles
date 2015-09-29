@@ -24,6 +24,9 @@ alias ipy='ipython qtconsole --ConsoleWidget.font_family="Consolas" --ConsoleWid
 # Fuck
 alias fuck='$(thefuck $(fc -ln -1))'
 
+# Pretty Diff
+alias dif='pretty-diff'
+
 # Go to apache virtualhosts
 alias vhosts="cd /etc/apache2/virtualhosts && la"
 

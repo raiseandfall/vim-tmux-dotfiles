@@ -135,3 +135,6 @@ ctrl+y +      Emmet
 C-n           Next instance
 C-p           Previous instance
 C-x           ...
+
+
+Shift+v       Visual select current line

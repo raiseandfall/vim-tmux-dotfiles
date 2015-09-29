@@ -47,6 +47,7 @@ let g:NERDTreeWinSize=40
 "let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
 let g:ctrlp_show_hidden = 1
 "let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
@@ -158,6 +159,12 @@ set smartcase       " ...unless we type a capital
 " ================ Sizes ===================
 set winheight=30
 set winminheight=5
+
+" ========== Black Hole Register =========
+nnoremap d "_d
+vnoremap d "_d
+nnoremap p "_dP
+vnoremap p "_dP
 
 " ================ Custom Settings ========================
 so ~/.yadr/vim/settings.vim
