@@ -158,7 +158,7 @@ set smartcase       " ...unless we type a capital
 
 " ================ Sizes ===================
 set winheight=30
-set winminheight=5
+" set winminheight=5
 
 " ========== Black Hole Register =========
 nnoremap d "_d
