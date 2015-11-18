@@ -17,6 +17,8 @@ alias pyc="/Applications/PyCharm.app/Contents/MacOS/pycharm"
 alias h="history"
 alias j="jobs"
 
+alias de="env | grep DOCKER_"
+
 alias vm="ssh vagrant@127.0.0.1 -p 2222"
 
 alias ipy='ipython qtconsole --ConsoleWidget.font_family="Consolas" --ConsoleWidget.font_size=13'
