@@ -1,6 +1,9 @@
 " Turn off default key mappings
 let g:multi_cursor_use_default_mapping=0
 
+" Stay in MC mode when pressing Escape
+let g:multi_cursor_exit_from_insert_mode=0
+
 " Switch to multicursor mode with ,mc
 let g:multi_cursor_start_key=',mc'
 let g:multi_cursor_start_word_key='g,mc'

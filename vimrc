@@ -57,6 +57,16 @@ set hidden
 "turn on syntax highlighting
 syntax on
 
+" NeoComplete
+let g:neocomplete#enable_at_startup = 1
+
+" Enable omni completion.
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
 " Change leader to a comma because the backslash is too far away
 " That means all \x commands turn into ,x
 " The mapleader has to be set before vundle starts loading all 
@@ -70,7 +80,9 @@ nnoremap <Leader>f :Unite -start-index file<CR>
 nmap <Leader>cis :ChangeInsideSurrounding<CR>
 
 " ===================== Syntastic ====================
-"let g:syntastic_javascript_jshint_conf = $HOME . '/.jshintrc'
+" let g:syntastic_javascript_jshint_conf = $HOME . '/.jshintrc'
+let g:syntastic_javascript_checkers = ['standard', 'jshint']
+" autocmd bufwritepost *.js silent !standard % --format
 
 " =============== Vundle Initialization ===============
 " This loads all the plugins specified in ~/.vim/vundles.vim
@@ -117,7 +129,7 @@ set list listchars=tab:\ \ ,trail:·
 set nowrap       "Don't wrap lines
 " set wrap linebreak nolist " get word wrapping that doesn't cut a word in half
 set linebreak    "Wrap lines at convenient points
-set breakindent
+" set breakindent
 
 set gdefault
 
