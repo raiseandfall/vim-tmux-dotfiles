@@ -10,6 +10,9 @@ endif
 
 " ================ General Config ====================
 
+" Text Width (word wrapping)
+set tw=80
+
 set number                      "Line numbers are good
 set backspace=indent,eol,start  "Allow backspace in insert mode
 set history=1000                "Store lots of :cmdline history
@@ -126,7 +129,7 @@ filetype indent on
 " Display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·
 
-set nowrap       "Don't wrap lines
+set wrap  " Wrap lines
 " set wrap linebreak nolist " get word wrapping that doesn't cut a word in half
 set linebreak    "Wrap lines at convenient points
 " set breakindent
