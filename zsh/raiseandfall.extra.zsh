@@ -16,3 +16,6 @@ DOCKER_TLS_VERIFY=1
 
 # Load extra protected stuff ( that we don't want to track with git )
 source ~/.extra-protected
+
+# PHP 7.0
+export PATH="$(brew --prefix homebrew/php/php70)/bin:$PATH"
