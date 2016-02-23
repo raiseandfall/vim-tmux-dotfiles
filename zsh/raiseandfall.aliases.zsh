@@ -17,7 +17,7 @@ alias pyc="/Applications/PyCharm.app/Contents/MacOS/pycharm"
 alias h="history"
 alias j="jobs"
 
-alias iadd="status -s | sed s/^...// | ipt -m | xargs g add" # cherry pick the files you want to stage
+alias iadd="git status -s | sed s/^...// | ipt -m | xargs g add" # cherry pick the files you want to stage
 
 alias de="env | grep DOCKER_"
 
