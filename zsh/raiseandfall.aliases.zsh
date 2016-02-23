@@ -17,6 +17,8 @@ alias pyc="/Applications/PyCharm.app/Contents/MacOS/pycharm"
 alias h="history"
 alias j="jobs"
 
+alias iadd="status -s | sed s/^...// | ipt -m | xargs g add" # cherry pick the files you want to stage
+
 alias de="env | grep DOCKER_"
 
 alias vm="ssh vagrant@127.0.0.1 -p 2222"

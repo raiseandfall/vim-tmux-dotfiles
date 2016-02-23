@@ -70,6 +70,7 @@ alias ze='vim ~/.zshrc'
 
 # Git Aliases
 alias gs='git status'
+alias gcherry='git status -s | sed s/^...// | ipt -m | git add'
 alias gstsh='git stash'
 alias gst='git stash'
 alias gsp='git stash pop'
