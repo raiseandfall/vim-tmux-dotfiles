@@ -43,8 +43,14 @@ set cursorline
 set nohlsearch
 
 " Show hidden files in NerdTree
-let g:NERDTreeShowHidden=1
-let g:NERDTreeWinSize=40
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeWinSize = 40
+
+" Vim Multiple Cursors
+let g:multi_cursor_next_key='<C-g>'
+let g:multi_cursor_prev_key='<C-p>'
+let g:multi_cursor_skip_key='<C-x>'
+let g:multi_cursor_quit_key='<Esc>'
 
 " CtrlP
 "let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
@@ -132,7 +138,7 @@ set list listchars=tab:\ \ ,trail:·
 set wrap  " Wrap lines
 " set wrap linebreak nolist " get word wrapping that doesn't cut a word in half
 set linebreak    "Wrap lines at convenient points
-" set breakindent
+set breakindent
 
 set gdefault
 
