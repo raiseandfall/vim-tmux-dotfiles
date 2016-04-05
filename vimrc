@@ -90,7 +90,7 @@ nmap <Leader>cis :ChangeInsideSurrounding<CR>
 
 " ===================== Syntastic ====================
 " let g:syntastic_javascript_jshint_conf = $HOME . '/.jshintrc'
-let g:syntastic_javascript_checkers = ['standard', 'jshint']
+let g:syntastic_javascript_checkers = ['standard', 'eslint']
 " autocmd bufwritepost *.js silent !standard % --format
 
 " =============== Vundle Initialization ===============
