@@ -128,7 +128,6 @@
 [user]
 	name = raiseandfall
 	email = druidev+github@gmail.com
-	signingkey = 35CD63F0
 [help]
 	autocorrect = 10
 [filter "lfs"]

@@ -28,6 +28,8 @@ alias ipy='ipython qtconsole --ConsoleWidget.font_family="Consolas" --ConsoleWid
 # Fuck
 alias fuck='$(thefuck $(fc -ln -1))'
 
+alias freshstart='deldir node_modules && npm i && npm run dev'
+
 # Pretty Diff
 alias dif='pretty-diff'
 

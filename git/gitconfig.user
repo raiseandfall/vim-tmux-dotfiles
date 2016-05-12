@@ -33,7 +33,7 @@
   phom = push origin master
 
   # Commit
-  cm = commit -S -m
+  cm = commit -m
 
   # Tags, branches, remotes
   tags = tag -l
