@@ -52,6 +52,10 @@ let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'
 
+" Markdown preview
+" let vim_markdown_preview_hotkey='<C->'
+" let vim_markdown_preview_browser='Google Chrome'
+
 " CtrlP
 "let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
 let g:ctrlp_show_hidden = 1
@@ -98,6 +102,8 @@ let g:syntastic_style_error_symbol = '»'
 let g:syntastic_style_warning_symbol = '»'
 let g:syntastic_mode_map = { 'mode': 'passive' }
 let g:syntastic_javascript_checkers = ['standard', 'eslint']
+let g:tsuquyomi_disable_quickfix = 1
+let g:syntastic_typescript_checkers = ['tsuquyomi', 'tslint']
 let g:syntastic_disabled_filetypes = ['ts', 'html']
 let g:syntastic_html_tidy_ignore_errors = [
 			\ 'trimming empty <i>',
