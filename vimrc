@@ -81,6 +81,12 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
+" YouCompleteMe
+autocmd Filetype typescript nnoremap <silent> gd :YcmCompleter GoToDefinition<CR>
+autocmd Filetype typescript nnoremap ,f :YcmCompleter GoToReferences<CR>
+"autocmd FileType typescript nmap <buffer> ,t :YcmCompleter GetDoc<CR>
+let g:ycm_key_list_select_completion = ['<TAB>', '<Down>', '<Enter>']
+
 " Change leader to a comma because the backslash is too far away
 " That means all \x commands turn into ,x
 " The mapleader has to be set before vundle starts loading all 
@@ -168,9 +174,16 @@ filetype indent on
 set list listchars=tab:\ \ ,trail:·
 
 set wrap  " Wrap lines
+set linebreak
 " set wrap linebreak nolist " get word wrapping that doesn't cut a word in half
-set linebreak    "Wrap lines at convenient points
-set breakindent
+if has('linebreak')
+  try
+    set breakindent             "bri:   visually indent wrapped lines
+    let &showbreak='↳'
+  catch /E518:/
+    " Unknown option: breakindent
+  endtry
+endif
 
 set gdefault
 
