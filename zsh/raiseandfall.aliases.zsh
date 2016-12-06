@@ -17,7 +17,9 @@ alias pyc="/Applications/PyCharm.app/Contents/MacOS/pycharm"
 alias h="history"
 alias j="jobs"
 
-alias iadd="git status -s | sed s/^...// | ipt -m | xargs git add" # cherry pick the files you want to stage
+alias gitChanges="{git ls-files --others --exclude-standard & git diff --name-only} | xargs ls"
+alias iadd="gitChanges | ipt -m | xargs git add"
+alias irm="git status -s | sed s/^...// | ipt -m | xargs git co --" # cherry pick the files you want to checkout
 
 alias de="env | grep DOCKER_"
 
