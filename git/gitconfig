@@ -125,13 +125,13 @@
   enabled = true
 [include]
   path = .gitconfig.user
-[user]
-	name = Matthieu COLLÉ
-	email = druidev+github@gmail.com
-	signingkey = 9317D297
 [help]
 	autocorrect = 10
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	required = true
+[commit]
+	gpgsign = true
+[gpg]
+	program = /usr/local/MacGPG2/bin/gpg2
